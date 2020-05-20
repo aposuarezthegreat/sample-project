@@ -11,6 +11,11 @@ object deps {
     object kotlin {
         const val gradle_plugin = "org.jetbrains.kotlin:kotlin-gradle-plugin:${versions.kotlin}"
         const val stdLib = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:${versions.kotlin}"
+
+        object coroutines {
+            const val core = "org.jetbrains.kotlinx:kotlinx-coroutines-core:${versions.coroutines}"
+            const val runtime = "org.jetbrains.kotlinx:kotlinx-coroutines-android:${versions.coroutines}"
+        }
     }
 
     object android {
@@ -23,11 +28,9 @@ object deps {
         const val core = "androidx.core:core-ktx:${versions.core}"
         const val material_design = "com.google.android.material:material:${versions.material_design}"
         const val constraint_layout = "androidx.constraintlayout:constraintlayout:${versions.constraint_layout}"
-        const val lifecycle_extensions = "androidx.lifecycle:lifecycle-extensions:${versions.navigation}"
+        const val lifecycle_extensions = "androidx.lifecycle:lifecycle-extensions:${versions.lifecycle_extension}"
         
         object navigation{
-            const val navigation_fragment = "androidx.navigation:navigation-fragment:${versions.navigation}"
-            const val navigation_ui = "androidx.navigation:navigation-ui:${versions.navigation}"
             const val navigation_fragment_ktx =  "androidx.navigation:navigation-fragment-ktx:${versions.navigation}"
             const val navigation_ui_ktx = "androidx.navigation:navigation-ui-ktx:${versions.navigation}"
         }

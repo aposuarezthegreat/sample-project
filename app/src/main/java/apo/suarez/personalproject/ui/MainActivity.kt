@@ -12,17 +12,10 @@ import apo.suarez.personalproject.R
 import apo.suarez.personalproject.navigation.AppNavigator
 import org.koin.android.ext.android.inject
 
-class MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity(R.layout.activity_main) {
 
-    private lateinit var navController: NavController
-    private lateinit var navigator: AppNavigator
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
-
-        navController = findNavController(R.id.nav_host_fragment)
-    }
+    private val navController: NavController by lazy { findNavController(R.id.nav_host_fragment) }
+    private val navigator: AppNavigator by inject()
 
     override fun onResume() {
         super.onResume()

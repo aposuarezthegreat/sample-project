@@ -1,4 +1,4 @@
-package ph.cortex.cnxhome.plugins
+package apo.suarez.personalproject.plugins
 
 import app_versions
 import org.gradle.api.JavaVersion

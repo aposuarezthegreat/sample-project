@@ -6,6 +6,9 @@ plugins{
 
 dependencies {
     //implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation(project(Modules.navigation))
+    implementation(project(Modules.splashscreen))
+
     implementation(deps.android.multidex)
 
     implementation(deps.kotlin.stdLib)
@@ -17,10 +20,8 @@ dependencies {
 
     implementation(deps.androidx.lifecycle_extensions)
 
-    implementation(deps.androidx.navigation.navigation_fragment)
-    implementation(deps.androidx.navigation.navigation_ui)
     implementation(deps.androidx.navigation.navigation_fragment_ktx)
-    implementation(deps.androidx.navigation.navigation_ui)
+    implementation(deps.androidx.navigation.navigation_ui_ktx)
 
     implementation(deps.koin.core)
     implementation(deps.koin.androidx.viewmodel)

@@ -4,6 +4,8 @@ import androidx.multidex.MultiDexApplication
 import org.koin.android.ext.koin.androidContext
 import org.koin.core.context.startKoin
 import apo.suarez.personalproject.di.appModule
+import apo.suarez.splashscreen.di.splashModule
+
 
 class PersonalProject : MultiDexApplication(){
 
@@ -17,6 +19,7 @@ class PersonalProject : MultiDexApplication(){
     }
 
     private fun koinModules() = listOf(
-        appModule
+        appModule,
+        splashModule
     )
 }

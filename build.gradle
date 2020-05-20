@@ -1,6 +1,7 @@
 import dependencies.deps
 
-buildscript {
+buildscript { 
+    ext.kotlin_version = '1.3.72'
 
     repositories {
         google()
@@ -10,7 +11,7 @@ buildscript {
     dependencies {
         classpath deps.android.agp
         classpath deps.kotlin.gradle_plugin
-    }
+        classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version" }
 }
 
 allprojects {
