@@ -1,0 +1,28 @@
+import dependencies.deps
+
+buildscript {
+
+    repositories {
+        google()
+        jcenter()
+        
+    }
+    dependencies {
+        classpath deps.android.agp
+        classpath deps.kotlin.gradle_plugin
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        maven {
+            url deps.maven.jitpack
+        }
+    }
+}
+
+task clean(type: Delete) {
+    delete rootProject.buildDir
+}
